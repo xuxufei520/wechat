@@ -2,10 +2,11 @@
   <div class="about">
     <van-field v-model="value" label="淦" placeholder="淦淦淦淦淦淦" />
     <van-swipe class="index_swipe" :autoplay="3000" indicator-color="white">
-      <van-swipe-item>淦</van-swipe-item>
-      <van-swipe-item>淦</van-swipe-item>
-      <van-swipe-item>淦</van-swipe-item>
-      <van-swipe-item>淦</van-swipe-item>
+      <van-swipe-item><img src="http://sky.hongzhiyu.top/static/hwj.png"><img src="http://sky.hongzhiyu.top/static/hwj.png"></van-swipe-item>
+      <van-swipe-item><img src="http://sky.hongzhiyu.top/static/hhc.png"><img src="http://sky.hongzhiyu.top/static/hhc.png"></van-swipe-item>
+      <van-swipe-item><img src="http://sky.hongzhiyu.top/static/jnq.png"><img src="http://sky.hongzhiyu.top/static/jnq.png"></van-swipe-item>
+      <van-swipe-item><img src="http://sky.hongzhiyu.top/static/ymz.png"><img src="http://sky.hongzhiyu.top/static/ymz.png"></van-swipe-item>
+      <van-swipe-item><img src="http://sky.hongzhiyu.top/static/xpf.png"><img src="http://sky.hongzhiyu.top/static/xpf.png"></van-swipe-item>
     </van-swipe>
     <van-row class="index_desc">
       <van-col span="8">淦</van-col>
@@ -53,6 +54,12 @@
         <img v-lazy="img" />
       </li>
     </ul>
+    <van-tabbar v-model="active">
+      <van-tabbar-item icon="home-o">淦</van-tabbar-item>
+      <van-tabbar-item icon="search">淦</van-tabbar-item>
+      <van-tabbar-item icon="friends-o">淦</van-tabbar-item>
+      <van-tabbar-item icon="setting-o">淦</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
@@ -62,6 +69,7 @@ export default {
   data() {
     return {
       value: "",
+       active: 0,
       imageList: [
         "https://img01.yzcdn.cn/vant/apple-1.jpg",
         "https://img01.yzcdn.cn/vant/apple-2.jpg",
@@ -99,14 +107,21 @@ export default {
 .about {
   min-height: 100%;
   background: #f6f6f6;
-  padding: 0 10px;
+  padding: 10px;
+  padding-bottom: 60px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   .index_swipe {
+    font-size: 66px;
     .van-swipe-item {
       color: #fff;
-      font-size: 20px;
-      line-height: 150px;
       text-align: center;
-      background-color: #39a9ed;
+      background-color: #eee;
+      display: flex;
+      justify-content: space-around;
+      img{
+        width: 150px;
+      }
     }
   }
   .index_desc {
@@ -154,7 +169,6 @@ export default {
         line-height: 143px;
         width: 100px;
         display: inline-block;
-        border: 1px solid #ccc;
       }
     }
   }
