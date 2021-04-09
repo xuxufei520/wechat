@@ -121,6 +121,7 @@ export default {
       justify-content: space-around;
       img{
         width: 150px;
+        height: 150px;
       }
     }
   }
